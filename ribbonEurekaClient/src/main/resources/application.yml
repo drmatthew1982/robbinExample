@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: user
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/,http://127.0.0.1:7003/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    ip-leaseExpirationDurationInSeconds: 2
+
+
+ServiceOnEureka:
+    ribbon:
+      eureka:
+        enabled: true
+      #listOfServers: localhost:8090,localhost:9092,localhost:9999
+      ServerListRefreshInterval: 15000  
