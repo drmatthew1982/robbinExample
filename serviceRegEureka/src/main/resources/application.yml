@@ -1,0 +1,16 @@
+server:
+    port: 7004
+spring:
+    application:
+        name: Eureka Service
+        
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/,http://127.0.0.1:7003/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
