@@ -2,7 +2,7 @@ server:
     port: 7004
 spring:
     application:
-        name: Eureka Service
+        name: ServiceOnEureka
         
 eureka:
   client:
